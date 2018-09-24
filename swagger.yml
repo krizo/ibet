@@ -1,0 +1,39 @@
+swagger: "2.0"
+info:
+  description: Api definition file for ibet app
+  version: "1.0.0"
+  title: ibet - Swagger REST
+consumes:
+- "application/json"
+produces:
+- "application/json"
+
+basePath: "/api"
+
+paths:
+  /fixtures:
+    get:
+      operationId: "app.endpoints.fixture.read"
+      tags:
+        - "Fixture"
+      summary: "Matches to be played"
+      responses:
+        200:
+          description: "Successful read of fixtures"
+          schema:
+            type: array
+            items:
+              properties:
+                id:
+                  type: integer
+                home_team:
+                  type: string
+                away_team:
+                  type: string
+                date:
+                  type: string
+                  format: date-time
+
+
+
+
