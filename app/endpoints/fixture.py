@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from ibet.app.endpoints.match import Match
+from app.endpoints.match import Match
 
 
 def get_timestamp():
-    return datetime.now().strftime(("%Y-%m-%d %H:%M"))
+    return datetime.now().strftime("%Y-%m-%d %H:%M")
 
 
 FIXTURES = [
